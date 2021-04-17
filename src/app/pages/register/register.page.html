@@ -1,0 +1,43 @@
+
+
+<ion-content>
+  <div class="picture">
+    
+  </div>
+  <div class="profile">
+    <h3 class="reg">Register</h3>
+    
+    
+        <ion-item>
+          <ion-label position="floating">email</ion-label>
+          <ion-input [(ngModel)]="email" type="email"  placeholder="Email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"  >Password</ion-label>
+        
+          <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Confirm Password</ion-label>
+          <ion-input [(ngModel)]="confirmPassword" type="password" (ionChange)="checkPassword()"  placeholder="Confirm Password"></ion-input>
+         
+        </ion-item>
+        <ion-item *ngIf="password && !passwordMatch">
+          <ion-text  color="danger" >Password do not match</ion-text>
+        
+        </ion-item>
+        <ion-item *ngIf="password && passwordMatch">
+        
+          <ion-text  color="success" >Password match</ion-text>
+        </ion-item>
+        <br>
+      
+        <ion-button shape="round" expand="block" (click)="register()">Sign up</ion-button>
+        <p class="bottom">Already have an account?<a (click)="tologin()"> Sign in now!</a></p>
+      
+    
+    
+  </div>
+  
+</ion-content>

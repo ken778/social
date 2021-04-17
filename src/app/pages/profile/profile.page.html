@@ -1,0 +1,44 @@
+
+
+<ion-content *ngIf="details">
+  <h3 class="top-hearder">Profile</h3>
+ <div class="profile">
+  <div class="details">
+    <div class="numbers">
+      <h5> Email :</h5>
+     
+    </div>
+    <div class="phone">
+      {{details.email}}</div>
+  </div>
+  
+  <div class="details">
+    <div class="numbers">
+      <h5> Name :</h5>
+     
+    </div>
+    <div class="phone">
+     Kenneth</div>
+  </div>
+  <div class="details">
+    <div class="numbers">
+      <h5> Phone number :</h5>
+     
+    </div>
+    <div class="phone">
+      0769524833</div>
+  </div>
+  <div class="complete">
+    <div class="prof" (click)="edit()">
+     <h5>complete Profile</h5>
+     <ion-fab-button>
+      <ion-icon name="arrow-forward-circle"></ion-icon>
+    </ion-fab-button>
+    </div>
+   
+    
+  </div>
+ </div>
+  
+ 
+</ion-content>

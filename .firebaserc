@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "social-platform-6c35f": {
+      "hosting": {
+        "app": [
+          "social-platform-6c35f"
+        ]
+      }
+    }
+  }
+}

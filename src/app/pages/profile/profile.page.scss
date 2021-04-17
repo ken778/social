@@ -1,0 +1,55 @@
+.profile{
+    position: absolute;
+    bottom: 0;
+    width: 23.4rem;
+    margin-right: -10px !important;
+    padding: 0;
+    border: 1px solid black;
+    height: 60vh;
+    padding: 2%;
+    background:rgb(96, 96, 255);
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+}
+.top-hearder{
+ padding: 2rem;
+}
+
+.complete{
+    align-items: center;
+  
+}
+.prof{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+     border-radius: 10px;
+     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+    
+   
+}
+.numbers h5{
+    margin-left: 15px;
+}
+.prof h5{
+    margin-left: 15px;
+}
+.prof ion-fab-button{
+    margin-right: 15px;
+    padding: 2%;
+    --box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    border: 1px solid black;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+}
+.phone{
+    margin-top: 1rem;
+    margin-right: 2rem;
+   
+}

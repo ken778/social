@@ -1,0 +1,66 @@
+ion-content{
+    --background:rgb(96, 96, 255);
+    
+}
+.container {
+    text-align: center;
+    align-items: center;
+  
+    left: 0;
+    right: 0;
+  margin-top: 9rem;
+  }
+  .continue-with-email-and-pass {
+    padding: 5%;
+    border: solid black 1px;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+  }
+  .continue-with-Goole {
+    padding: 5%;
+    border: solid black 1px;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+  }
+  ion-card {
+    height: 30rem;
+    --border-top-left-radius: 20px;
+    --box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+  }
+  .wrap {
+    padding: 4%;
+  }
+  .words {
+    margin-left: 3rem;
+    margin-top: 8px;
+  }
+  .words2 {
+    margin-left: 2rem;
+    margin-top: 8px;
+    margin-right: 10px;
+  }
+  .link{
+      color: white;
+  }
+  .heading{
+      text-align: center;
+      color: white;
+  }
+  .wrap {
+    padding: 4%;
+    color: white;
+    border: 1px solid black;
+    width: 10rem;
+    border-bottom-right-radius: 5rem;
+    background-color: rgb(139, 241, 139);
+  }
+  .slogan{
+      color: white;
+      text-align: center;
+  }
