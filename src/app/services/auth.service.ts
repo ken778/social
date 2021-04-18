@@ -44,7 +44,7 @@ export class AuthService {
   //logout
   logout(){
     this.afauth.signOut().then(()=>{
-      this.router.navigate(['/login']);
+      this.router.navigate(['/sign-up']);
     })
   }
 
@@ -62,7 +62,8 @@ export class AuthService {
   Googlelogin(){
    let provider = new firebase.auth.GoogleAuthProvider();
    this.afauth.signInWithPopup(provider).then(()=>{
-     this.router.navigate(['/home'])
+     this.toast("Authenticated","success")
+     this.router.navigate(['/feed'])
    }).catch((err)=>{
      console.log('err',err.message);
    })

@@ -4,15 +4,15 @@
 .profile{
     position: absolute;
     bottom: 0;
-    width: 23.4rem;
     margin-right: -10px !important;
     padding: 0;
-    border: 1px solid black;
+  
     height: 68vh;
     padding: 2%;
     background:rgb(96, 96, 255);
     border-top-left-radius: 4rem;
     border-top-right-radius: 4rem;
+    width: 100%;
     
 }
 h3{
@@ -22,17 +22,22 @@ ion-card{
    --background:rgb(143, 143, 255);
 }
 ion-item{
-    border: 1px solid black;
+   
     margin-top: .5rem;
     border-radius: 10px;
     --box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+    --margin-left: 2rem;
+    --margin-right: 2rem;
+    height: 3rem;
+    border: 0.5px solid rgb(126, 97, 231);
+
 
 }
 a{
     color: white;
 }
 .picture{
-    height: 40vh;
+    height: 50vh;
     background-image: url(../../../assets/images/back2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -40,9 +45,12 @@ a{
     
 }
 ion-button{
-    --background:rgb(61, 60, 60);
+    --background:rgb(61, 60, 60); 
     --background-activated:rgb(61, 60, 60);
 }
 .p{
     padding: 2rem;
+}
+.nav{
+    text-align: center;
 }

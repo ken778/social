@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'sign-up',
     pathMatch: 'full'
   },
   {
@@ -34,6 +34,34 @@ const routes: Routes = [
   {
     path: 'edit-profile',
     loadChildren: () => import('./pages/edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
+  },
+  {
+    path: 'forgot-password',
+    loadChildren: () => import('./pages/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+  },
+  {
+    path: 'post',
+    loadChildren: () => import('./pages/post/post.module').then( m => m.PostPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
+  },
+  {
+    path: 'feed',
+    loadChildren: () => import('./pages/feed/feed.module').then( m => m.FeedPageModule)
+  },
+  {
+    path: 'add-post',
+    loadChildren: () => import('./pages/add-post/add-post.module').then( m => m.AddPostPageModule)
+  },
+  {
+    path: 'detailed/:ref',
+    loadChildren: () => import('./pages/detailed/detailed.module').then( m => m.DetailedPageModule)
   },
 ];
 

@@ -35,6 +35,10 @@ export class RegisterPage implements OnInit {
         this.afs.collection('users').doc(data.user.uid).set({
           'userId' : data.user.uid,
           'email' : this.email,
+          "name":"",
+          'surname':"",
+          'contact':"",
+          'category':"",
       
 
         })

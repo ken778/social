@@ -7,19 +7,22 @@
   <div class="profile">
     <h3>Welcome</h3>
    
-     
         <ion-item>
-          <ion-label position="floating">email</ion-label>
+         
           <ion-input [(ngModel)]="email" type="email"  placeholder="Email"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">password</ion-label>
+     
           <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
           
         </ion-item>
         <br>
       <ion-button shape="round" expand="block"(click)="login()">Sign in</ion-button>
-      <p class="p">Dont have an account?<a (click)="toRegister()"> Sign up now!</a></p>
+      <div class="nav">
+        <p>Forgot password?<a (click)="toForgotPassword()"> click here to reset!</a></p>
+        <p>Dont have an account?<a (click)="toRegister()"> Sign up now!</a></p>
+      </div>
+     
    
     </div>
   

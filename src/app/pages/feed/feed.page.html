@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+<ion-tab>
+  <ion-card  *ngFor="let item of post"
+   [routerLink]="['/', 'detailed', item.payload.doc.id]"
+  routerLinkActive="router-link-active">
+    <p>{{item.payload.doc.data().createdAt | date: 'MMM d, y, h:mm:ss a'}}</p>
+    <div class="picture">
+
+    </div>
+    <div class="container">
+     
+      <h3>{{item.payload.doc.data().message}}</h3>
+      <div class="action">
+        <div class="like" (click)="like()">
+          <ion-icon name="thumbs-up-sharp"></ion-icon>
+        </div>
+        <div class="like2" (click)="like()">
+          <ion-icon class="icon2"  name="chatbox-outline"></ion-icon>
+        </div>
+      </div>
+     
+
+    </div>
+
+    <a
+    class="back"
+    [routerLink]="['/', 'detailed', item.payload.doc.id]"
+    routerLinkActive="router-link-active"
+    ></a
+  >
+   
+    
+  </ion-card>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button  tab="feed">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="Topost()" tab="post">
+      <ion-icon name="add"></ion-icon>
+      <ion-label>Post</ion-label>
+    </ion-tab-button> 
+    <ion-tab-button (click)="ToProfile()" tab="profile">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>Profile</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tab>
+  </ion-content>

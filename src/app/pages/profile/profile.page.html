@@ -1,44 +1,86 @@
-
-
-<ion-content *ngIf="details">
-  <h3 class="top-hearder">Profile</h3>
- <div class="profile">
-  <div class="details">
-    <div class="numbers">
-      <h5> Email :</h5>
-     
-    </div>
-    <div class="phone">
-      {{details.email}}</div>
-  </div>
-  
-  <div class="details">
-    <div class="numbers">
-      <h5> Name :</h5>
-     
-    </div>
-    <div class="phone">
-     Kenneth</div>
-  </div>
-  <div class="details">
-    <div class="numbers">
-      <h5> Phone number :</h5>
-     
-    </div>
-    <div class="phone">
-      0769524833</div>
-  </div>
-  <div class="complete">
-    <div class="prof" (click)="edit()">
-     <h5>complete Profile</h5>
-     <ion-fab-button>
-      <ion-icon name="arrow-forward-circle"></ion-icon>
-    </ion-fab-button>
-    </div>
-   
-    
-  </div>
- </div>
+<ion-content>
   
  
-</ion-content>
+  
+
+  <ion-content *ngIf="details">
+     
+
+
+
+    <div class="picture">
+     
+    </div>
+
+   
+    
+   <div class="profile">
+    <div class="details">
+      <div class="numbers">
+        <h5>Email:</h5>
+       
+      </div>
+      <div class="phone">
+        {{details.email}}</div>
+    </div>
+    
+    <div class="details">
+      <div class="numbers">
+        <h5> Name :</h5>
+         
+      </div>
+      <div class="phone">
+        {{details.name}}</div>
+    </div>
+    <div class="details">
+      <div class="numbers">
+        <h5> Phone number :</h5>
+       
+      </div>
+      <div class="phone">
+        {{details.contact}}</div>
+    </div>
+    <div class="complete">
+      <div class="prof" (click)="edit()">
+       <h5>complete Profile</h5>
+       <ion-fab-button>
+        <ion-icon name="arrow-forward-circle"></ion-icon>
+      </ion-fab-button>
+      </div>
+     
+      
+    </div>
+    <br>
+    <div class="complete">
+      <div class="prof" (click)="logout()">
+       <h5>Logout</h5>
+       <ion-fab-button>
+        <ion-icon name="log-out"></ion-icon>
+      </ion-fab-button>
+      </div>
+     
+      
+    </div>
+   </div>
+    
+   <ion-tab>
+    <ion-tab-bar (click)="ToHome()" slot="bottom">
+      <ion-tab-button   tab="feed">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button (click)="Topost()" tab="post">
+        <ion-icon name="add"></ion-icon>
+        <ion-label>Post</ion-label>
+      </ion-tab-button> 
+      <ion-tab-button tab="profile">
+        <ion-icon name="person"></ion-icon>
+        <ion-label>Profile</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tab>
+   
+  </ion-content>
+  
+  </ion-content>

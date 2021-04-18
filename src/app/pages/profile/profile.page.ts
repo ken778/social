@@ -1,8 +1,17 @@
+import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFireStorage } from '@angular/fire/storage';
 import { Router } from '@angular/router';
+import { $ } from 'protractor';
 import { AuthService } from 'src/app/services/auth.service';
 
+
+export interface imageData{
+  fileName:string;
+  filePath:string;
+  size: string;
+}
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.page.html',
@@ -11,10 +20,16 @@ import { AuthService } from 'src/app/services/auth.service';
 export class ProfilePage implements OnInit {
 
   details:any;
+  fileName:string;
+  fileSize:string;
+  isLoaded:Boolean;
+  isLoading:boolean;
+  private imageCollection:AngularFirestoreCollection<ImageData>
 
-  constructor(private  database: AngularFirestore, private auth : AuthService,private router:Router) { }
+  constructor(private  database: AngularFirestore, private auth : AuthService,private router:Router,private storage: AngularFireStorage ) { }
 
   ngOnInit() {
+    //getting details of a current loged in user
     this.auth.LogedUser().subscribe(res=>{
       res.uid
       this.auth.GetUsers().doc(res.uid).snapshotChanges().subscribe(element=>{
@@ -34,5 +49,17 @@ export class ProfilePage implements OnInit {
   edit(){
     this.router.navigate(['/edit-profile'])
   }
+  Topost(){
+    this.router.navigate(['/post'])
+  }
+  ToHome(){
+    this.router.navigate(['/feed'])
+  }
+  logout(){
+    this.auth.logout();
+  }
+
+
+ 
 
 }

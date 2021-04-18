@@ -1,11 +1,11 @@
 .profile{
     position: absolute;
     bottom: 0;
-    width: 23.4rem;
+    width: 100%;
     margin-right: -10px !important;
     padding: 0;
     border: 1px solid black;
-    height: 60vh;
+    height: 70vh;
     padding: 2%;
     background:rgb(96, 96, 255);
     border-top-left-radius: 4rem;
@@ -53,3 +53,21 @@
     margin-right: 2rem;
    
 }
+ion-tab-bar{
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+  }
+.picture{
+    height: 50vh;
+    width: 100%;
+    background-image: url(../../../assets/images/pro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+ .camer{
+     text-align: center;
+ }
