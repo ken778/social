@@ -32,14 +32,7 @@ export class FeedPage implements OnInit {
       console.log(this.po);
     });*/
  
-  this._data
-      .GetJobs()
-      .snapshotChanges()
-      .subscribe((action) => {
-        //console.log(action);
-        this.post = action; 
-      });
-      console.log('im here')
+  
 
 }
       Topost(){

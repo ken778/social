@@ -1,83 +1,82 @@
-.home{
-    
-    margin-left: 5%;
-    font-size: 25px;
+.home {
+  margin-left: 5%;
+  font-size: 25px;
 }
 
-.setting{
-    right: 0;
-    position: absolute;
-    margin-right: 5%;
-    font-size: 25px;
-  
-}.list{
-    right: 0;
-    position: absolute;
-    margin-right: 5%;
-    bottom: 5%;
-    font-size: 30px;
-}.videocam{
-    font-size: 30px;
-    float: left;
-position: absolute;
-margin-left: 5%;
-bottom: 5%;
+.setting {
+  right: 0;
+  position: absolute;
+  margin-right: 5%;
+  font-size: 25px;
 }
-.play-circle{
-    float: left;
-    position: absolute;
-    margin-left: 25%;
-    bottom: 5%;
-    font-size: 30px;
+.list {
+  right: 0;
+  position: absolute;
+  margin-right: 5%;
+  bottom: 5%;
+  font-size: 30px;
 }
-.images{
-
-    float: left;
-    position: absolute;
-    margin-left: 43%;
-    bottom: 5%;
-    font-size: 30px;
-
+.videocam {
+  font-size: 30px;
+  float: left;
+  position: absolute;
+  margin-left: 5%;
+  bottom: 5%;
 }
-.person-circle{
-    float: left;
-    position: absolute;
-    margin-left: 65%;
-    bottom: 5%;
-    font-size: 30px;
+.play-circle {
+  float: left;
+  position: absolute;
+  margin-left: 25%;
+  bottom: 5%;
+  font-size: 30px;
 }
-ion-tab-bar{
-    left: 0;
-    right: 0;
-    position: absolute;
-    bottom: 0;
-    position: fixed;
-  }
-.container{
-    padding: 0.5rem;
+.images {
+  float: left;
+  position: absolute;
+  margin-left: 43%;
+  bottom: 5%;
+  font-size: 30px;
 }
-.picture{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: yellow;
-    margin-left: .5rem;
+.person-circle {
+  float: left;
+  position: absolute;
+  margin-left: 65%;
+  bottom: 5%;
+  font-size: 30px;
 }
-ion-card p{
-    margin-left: 3rem;
+ion-tab-bar {
+  left: 0;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  position: fixed;
 }
-.like{
-    padding: .4rem;
-    border: 1px solid black;
-    width: 2.7rem;
-    border-radius: 10px;
-    text-align: center;
+.container {
+  padding: 0.5rem;
 }
-.action{
-    display: flex;
-    justify-content: space-around;
+.picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url(../../../assets/images/pro.jpg);
+  background-size: cover;
+  margin-left: 0.5rem;
 }
-.icon2{
-    font-size: 1.8rem;
-    margin-top: 1px;
+ion-card p {
+  margin-left: 3rem;
+}
+.like {
+  padding: 0.4rem;
+  border: 1px solid black;
+  width: 2.7rem;
+  border-radius: 10px;
+  text-align: center;
+}
+.action {
+  display: flex;
+  justify-content: space-around;
+}
+.icon2 {
+  font-size: 1.8rem;
+  margin-top: 1px;
 }

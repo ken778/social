@@ -1,3 +1,4 @@
+import { ToastController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { NgForm } from '@angular/forms';
@@ -12,7 +13,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class PostPage implements OnInit {
   likes:[];
 
-  constructor(private auth:AuthService,private _afa: AngularFirestore, private router: Router) { }
+  constructor(private toastr: ToastController,private auth:AuthService,private _afa: AngularFirestore, private router: Router) { }
 
   ngOnInit() {
   }
@@ -29,6 +30,7 @@ export class PostPage implements OnInit {
           const PostInfo : any = {
             'id_user' : res.uid,
              'message': PostData.value.postMessage,
+             'about': PostData.value.about,
             'date_created' : DateCreated,
             'createdAt' : createdAt,
              likes:[],
@@ -37,7 +39,8 @@ export class PostPage implements OnInit {
           console.log(PostInfo)
 
           this._afa.collection('posts').add(PostInfo).then( () => {
-            console.log('post created')
+          this.toast('post created','success')
+          this.router.navigate(['/home-page'])
           }).catch( err => {
             console.log(err.message)
           })
@@ -49,10 +52,19 @@ export class PostPage implements OnInit {
   }
 
   toHome(){
-    this.router.navigate(['/feed'])
+    this.router.navigate(['/home-page'])
   }
   toProfile(){
     this.router.navigate(['/profile'])
   }
+  async toast(message, status){
+    const toast = await this.toastr.create({
+      message: message,
+      position: 'top',
+      color: status,
+      duration: 2000
+    })
+    toast.present()
+  }//end of toast
 
 }

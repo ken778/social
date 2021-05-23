@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-icon class="arrow" size="large" name="arrow-back" (click)="toProfile()"></ion-icon>
+    <ion-title>Adding Subject</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="profile">
+ 
+    <div class="det">
+      <form (ngSubmit)="subject(subjectData)" #subjectData="ngForm">
+        <ion-item>
+          
+          <ion-input 
+          placeholder="Subject name"
+          #subjectName="ngModel"
+          name="subjectName"
+          type="text"
+          ngModel
+          required></ion-input>
+        </ion-item> 
+       
+       
+        
+      
+  
+        <ion-button shape="round" class="update" expand="block" type="submit">Add</ion-button>
+        
+      </form>
+     
+     
+    
+
+    </div>
+    
+     
+    
+    
+  </div>
+</ion-content>

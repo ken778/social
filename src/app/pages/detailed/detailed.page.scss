@@ -1,0 +1,14 @@
+ion-content {
+  --background: rgb(169, 169, 252);
+}
+.texting {
+}
+.text {
+  border: 1px solid black;
+  left: 0;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  position: fixed;
+  width: 10rem;
+}

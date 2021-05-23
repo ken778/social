@@ -1,6 +1,6 @@
 
 
-<ion-content >
+<ion-content *ngIf="details">
   <ion-icon class="arrow" size="large" name="arrow-back" (click)="toProfile()"></ion-icon>
   <div class="picture">
   
@@ -8,28 +8,46 @@
   <div class="profile">
  
     <div class="det">
-      <ion-item>
-          
-        <ion-input [(ngModel)]="email" type="email"  placeholder="Email"></ion-input>
-      </ion-item>
-      <ion-item>
-     
-        <ion-input [(ngModel)]="Fname" type="text"  placeholder="First Name"></ion-input>
-      </ion-item>
-      <ion-item>
-        
-        <ion-input [(ngModel)]="LastName" type="text"  placeholder="Last Name"></ion-input>
-      </ion-item>
-      <ion-item>
-      
-        <ion-input [(ngModel)]="contact" type="number"  placeholder="Number"></ion-input>
-      </ion-item>
-     
+      <form (ngSubmit)="AddUsers(UserData)" #UserData="ngForm">
+ 
+          <ion-input value="{{details.email}}" class="input" [(ngModel)]="details.email" type="email"  name="email"
+          ngModel
+          #email="ngModel"
+          ngModel
+          required></ion-input>
+  
     
-
-      <ion-button shape="round" class="update" expand="block" (click)="update()">UPDATE</ion-button>
-      
+       
+          <ion-input value="{{details.name}}" class="input" [(ngModel)]="details.name" type="text" name="name"
+          ngModel
+          #name="ngModel"
+          ngModel
+          required></ion-input>
      
+       
+          
+          <ion-input value="{{details.surname}}" class="input" [(ngModel)]="details.surname" type="text"  name="surname"
+          ngModel
+          #surname="ngModel"
+          ngModel
+          required></ion-input>
+       
+       
+        
+          <ion-input value="{{details.name}}" class="input" [(ngModel)]="details.contact" type="text"  name="contact"
+          ngModel
+          #contact="ngModel"
+          ngModel
+          required></ion-input>
+     
+       
+      
+  
+        <ion-button shape="round" class="update" expand="block" type="submit">UPDATE</ion-button>
+        
+       
+        </form>
+      
     
 
     </div>

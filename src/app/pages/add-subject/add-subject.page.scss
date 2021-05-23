@@ -1,4 +1,5 @@
 ion-content {
+  --background: rgb(130, 130, 243);
 }
 .form {
   position: absolute;
@@ -41,17 +42,4 @@ ion-item {
 }
 .arrow {
   padding: 1rem;
-}
-.picture {
-  height: 50vh;
-  background-image: url(../../../assets/images/back2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-ion-input {
-  text-align: center;
-  border: 0.5px black solid;
-  --background: white;
-  border-radius: 15px;
-  margin-bottom: 5px;
 }

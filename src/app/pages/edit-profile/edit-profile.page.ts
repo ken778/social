@@ -1,3 +1,4 @@
+import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
@@ -15,7 +16,7 @@ export class EditProfilePage implements OnInit {
   contact:any;
   category:any;
   Fname:any;
-  
+  id:any;
 
    details:any;
    email:any;
@@ -89,4 +90,12 @@ export class EditProfilePage implements OnInit {
   toProfile(){
     this.router.navigate(['/profile'])
   }
+  AddUsers(UserData:NgForm){
+    this.auth.LogedUser().subscribe(res=>{
+      res.uid;
+      this.id = res.uid;
+      this.auth.UpdateStudentInfo(this.id,UserData.value);
+    })
+}
+
 }

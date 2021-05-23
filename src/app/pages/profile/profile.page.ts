@@ -53,12 +53,17 @@ export class ProfilePage implements OnInit {
     this.router.navigate(['/post'])
   }
   ToHome(){
-    this.router.navigate(['/feed'])
+    this.router.navigate(['/home-page'])
   }
   logout(){
     this.auth.logout();
   }
-
+  addSubject(){
+    this.router.navigate(['/add-subject'])
+  }
+  toProfile(){
+    this.router.navigate(['/profile'])
+  }
 
  
 

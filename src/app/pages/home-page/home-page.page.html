@@ -1,9 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>home-page</ion-title>
+    <ion-title>Modules</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
 
+  <p>Browse</p>
+ <ion-card *ngFor='let item of subject' [routerLink]="['/', 'module1', item.id]"
+ routerLinkActive="router-link-active">
+  
+     {{item.subjectName}}
+   
+
+ </ion-card >
+ 
+<ion-tab>
+  <ion-tab-bar  slot="bottom">
+ 
+
+    <ion-tab-button (click)="Topost()" tab="post">
+      <ion-icon  name="list"></ion-icon>
+      <ion-label>Modules</ion-label>
+    </ion-tab-button> 
+    <ion-tab-button (click)="toprofile()" tab="profile">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>Profile</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tab>
 </ion-content>

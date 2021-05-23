@@ -63,6 +63,19 @@ const routes: Routes = [
     path: 'detailed/:ref',
     loadChildren: () => import('./pages/detailed/detailed.module').then( m => m.DetailedPageModule)
   },
+  {
+    path: 'add-subject',
+    loadChildren: () => import('./pages/add-subject/add-subject.module').then( m => m.AddSubjectPageModule)
+  },
+  {
+    path: 'module1/:ref',
+    loadChildren: () => import('./pages/module1/module1.module').then( m => m.Module1PageModule)
+  },
+  {
+    path: 'module2/:ref',
+    loadChildren: () => import('./pages/module2/module2.module').then( m => m.Module2PageModule)
+  },
+
 ];
 
 @NgModule({

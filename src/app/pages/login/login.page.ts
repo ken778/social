@@ -29,7 +29,7 @@ export class LoginPage implements OnInit {
       this.auth.login(this.email, this.password).then(()=>{
       
          loading.dismiss();
-         this.router.navigate(['/feed']);
+         this.router.navigate(['/home-page']);
       
       }).catch((error)=>{
         loading.dismiss();

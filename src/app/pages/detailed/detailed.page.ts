@@ -23,5 +23,8 @@ export class DetailedPage implements OnInit {
       console.log(this.post);
     });
   }
+  back(){
+    this.router.navigate(['/feed'])
+  }
 
 }

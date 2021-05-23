@@ -1,0 +1,33 @@
+<ion-header *ngIf="subject">
+
+  <ion-toolbar  color="primary">
+    <ion-icon class="icon2" name="arrow-back"  (click)="back()" size="large" slot="start"></ion-icon>
+ 
+    <ion-title>
+      {{subject.subjectName}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card  *ngFor="let item of post"  [routerLink]="['/', 'module2',item.payload.doc.id]"
+  routerLinkActive="router-link-active"
+  >
+
+   <p>{{item.payload.doc.data().createdAt | date: 'MMM d, y, h:mm:ss a'}}</p>
+
+   <div class="container">
+     <h3>{{item.payload.doc.data().about}}</h3>
+     
+     
+    
+
+   </div>
+ </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon class="arrow" (click)="toPosts()" name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
