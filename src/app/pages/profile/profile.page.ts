@@ -52,7 +52,7 @@ export class ProfilePage implements OnInit {
   Topost(){
     this.router.navigate(['/post'])
   }
-  ToHome(){
+  toProfile(){
     this.router.navigate(['/home-page'])
   }
   logout(){
@@ -61,10 +61,7 @@ export class ProfilePage implements OnInit {
   addSubject(){
     this.router.navigate(['/add-subject'])
   }
-  toProfile(){
-    this.router.navigate(['/profile'])
-  }
-
+ 
  
 
 }
